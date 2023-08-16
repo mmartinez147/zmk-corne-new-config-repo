@@ -9,21 +9,12 @@
 #include <dt-bindings/zmk/bt.h>
 
 
-&mt {
-    tapping-term-ms = <200>;
-};
- 
 / {
         keymap {
                 compatible = "zmk,keymap";
 
                 default_layer {
-// -----------------------------------------------------------------------------------------
-// | ESC  |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  |      |
-// | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  :  |      |
-// | ALT  |  Z  |  X  |  C  |  V  |  B  |   |  B  |  N   |  M  |  ,  |  .  | shft |        
-//                    |??sft| cmd |SPClw|   |ENTrs| BKSP |tbtri|      
-                     
+
                         bindings = <
    &kp ESC   &kp Q &kp W &kp E &kp R &kp T           &kp Y &kp U  &kp I &kp O     &kp P     &kp C_AC_SEARCH
    &kp LCTRL &kp A &kp S &kp D &kp F &kp G           &kp H &kp J  &kp K &kp L     &kp COLON &kp CAPS
@@ -32,49 +23,40 @@
                         >;
                 };
 
-                lower_layer {
-// -----------------------------------------------------------------------------------------
-// | ESC  |    |  1  |  2  |  3  |     |     |     |     | UP  |     |     | BKSP |             
-// | CTRL |    |  4  |  5  |  6  |     |     |     | LFT | DWN | RGT |     |      |              
-// | ALT  |    |  7  |  8  |  9  |  0  |     |     |     |     |     |     |      |              
-//                     | GUI |   | SPC |     | ENT | BKSP| ALT |
-                       
+                lower_layer {  
+
                         bindings = <
    &kp ESC   &trans &kp N1 &kp N2 &kp N3 &kp             &trans &trans &trans &trans &trans &kp PSCRN
    &bt CTRL  &trans &kp N4 &kp N5 &kp N6 &kp             &trans &trans &trans &trans &trans &trans
    &kp LALT  &trans &kp N7 &kp N8 &kp N9 &kp N0          &trans &trans &trans &trans &trans &kp SHIFT
-          &mt LGUI TAB &lt 2 SPACE   &kp SHIFT           &kp BSPC &lt 1 RET &lt 3 TAB
+                           &trans &trans &trans          &trans &trans &trans 
                         >;
                 };
 
                 raise_layer {
-// -----------------------------------------------------------------------------------------
-// | ESC  |  !  |  @  |  #  |  $  |  %  |   |  +  |  (  |  )  |  _  |  *  | BKSP |
-// | CTRL |  <  |  >  |  '  |  /  |  ;  |   |  -  |  [  |  ]  |  ^  |  \  |  `   |
-// | ALT  |  ,  |  .  |  "  |  ?  |  :  |   |  =  |  {  |  }  |  &  | "|" |  ~   |
-//                    | GUI |     | SPC |   | ENT |     | ALT |
-                      
+
                         bindings = <
    &kp ESC   &kp EXCL  &kp AT  &kp HASH &kp DLLR  &kp PRCNT    &kp PLUS  &kp LPAR &kp RPAR &kp UNDER &kp STAR &kp BSPC
    &kp LCTRL &kp LT    &kp GT  &kp APOS &kp FSLH  &kp SEMI     &kp MINUS &kp LBKT &kp RBKT &kp CARET &kp BSLH &kp GRAVE
    &kp LALT  &kp COMMA &kp DOT &kp DQT  &kp QMARK &kp COLON    &kp EQUAL &kp LBRC &kp RBRC &kp AMPS  &kp PIPE &kp TILDE
-                       &mt LGUI TAB &lt 2 SPACE   &kp SHIFT    &kp BSPC &lt 1 RET &lt 3 TAB
+                                       &trans &trans &trans    &trans &trans &trans
                         >;
                 };
 
                 quad_layer {
-// -----------------------------------------------------------------------------------------
-// | ESC  | brup|brdwn|lchpd|     |     |      |volup|volup|  up |     |     |      |
-// | CTRL |     |     |     |     |     |      | mute|left | down|right|     |      |
-// | ALT  |     |     |     |     |     |      |     |     |     |     |     |      |
-//                    | GUI |     |     |      |     |     |     |
-                       
+
                         bindings = <
    &kp ESC   &kp C_BRI_UP &kp C_BRI_DN &kp C_AC_DESKTOP_SHOW_ALL_APPLICATIONS &trans &trans           &kp C_VOL_UP &kp C_VOL_DN &kp UP   &kp C_PREV &kp C_PP &kp C_NEXT
    &kp LCTRL &trans       &trans       &trans                                 &trans &trans           &kp C_MUTE   &trans       &kp DOWN &kp RIGHT  &trans   &trans  
    &kp LALT  &trans       &trans       &trans                                 &trans &trans           &trans       &trans       &trans   &trans     &trans   &trans  
-                                                       &mt LGUI TAB &lt 2 SPACE   &kp SHIFT           &kp BSPC &lt 1 RET &lt 3 TAB
+                                                                       &trans &trans &trans           &trans &trans &trans
                         >;
                 };          
         };
 };
+
+// -----------------------------------------------------------------------------------------
+// | ESC  |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  |      |
+// | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  :  |      |
+// | ALT  |  Z  |  X  |  C  |  V  |  B  |   |  B  |  N   |  M  |  ,  |  .  | shft |        
+//                    |??sft| cmd |SPClw|   |ENTrs| BKSP |tbtri| 
