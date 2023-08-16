@@ -8,11 +8,7 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 
-// #define DEFAULT     0
-// #define lower_layer 1
-// #define raise_layer 2
-// #define quad_layer  3 
-
+ 
 / {
         keymap {
                 compatible = "zmk,keymap";
@@ -32,7 +28,6 @@
                         >;
                 };
 
-
                 lower_layer {
 // -----------------------------------------------------------------------------------------
 // | ESC  |    |  1  |  2  |  3  |     |     |     |     | UP  |     |     | BKSP |             
@@ -48,7 +43,6 @@
                         >;
                 };
 
-
                 raise_layer {
 // -----------------------------------------------------------------------------------------
 // | ESC  |  !  |  @  |  #  |  $  |  %  |   |  +  |  (  |  )  |  _  |  *  | BKSP |
@@ -63,7 +57,6 @@
                        &mt LGUI TAB &lt 2 SPACE   &kp SHIFT    &kp BSPC &lt 1 RET &lt 3 TAB
                         >;
                 };
-
 
                 quad_layer {
 // -----------------------------------------------------------------------------------------
