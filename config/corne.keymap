@@ -9,7 +9,7 @@
 #include <dt-bindings/zmk/bt.h>
 
 &mt {
-    tapping-term-ms = <250>;
+    tapping-term-ms = <200>;
 };
 
 / {
@@ -17,11 +17,11 @@
                 compatible = "zmk,keymap";
 
                 default_layer {
-                                bindings = <
+                         bindings = <
         &kp ESC   &kp Q  &kp W  &kp E  &kp R  &kp T           &kp Y  &kp U  &kp I &kp O      &kp P      &kp BSPC       
         &kp LCTRL &kp A  &kp S  &kp D  &kp F  &kp G           &kp H  &kp J  &kp K &kp L      &kp COLON  &kp C_AC_SEARCH
         &kp LALT  &kp Z  &kp X  &kp C  &kp V  &kp B           &kp B  &kp N  &kp M &kp COMMA  &kp DOT    &kp RSHIFT
-                    &mt LGUI   &lt 2 TAB  &kp SPACE           &mt RSHIFT BSPC   &lt 1 RET  &lt 3 CAPS         
+                    &kp LGUI   &lt 2 TAB  &kp SPACE           &mt RSHIFT BSPC   &lt 1 RET  &lt 3 CAPS         
                         >;
                 };
 
@@ -29,7 +29,7 @@
                         bindings = <
    &kp ESC   &none  &kp N1  &kp N2  &kp N3  &none           &kp PSCRN  &trans    &kp UP    &trans     &trans  &trans 
    &kp LCTRL &none  &kp N4  &kp N5  &kp N6  &none           &trans     &kp LEFT  &kp DOWN  &kp RIGHT  &trans  &trans
-   &kp LALT  &none  &kp N7  &kp N8  &kp N9  &kp N0          &trans     &trans    &trans    &trans     &trans  &kp RSHIFT
+   &kp LALT  &none  &kp N7  &kp N8  &kp N9  &kp N0          &trans     &trans    &trans    &trans     &trans  &trans
                             &trans  &trans  &trans          &trans     &trans  &trans    
                         >;
                 };
