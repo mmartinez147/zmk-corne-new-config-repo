@@ -10,46 +10,67 @@
 #include <dt-bindings/zmk/ext_power.h>
 
 
+mt   delay here!!!!!!
 
+/ {
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
+        layer_three {
+            if-layers = <1 2>;
+            then-layer = <3>;
+        };
+    };
+};
+
+// ADD TAP DANCE FOR SHIFT KEY THAT WHEN DOUBLE TAPPE TURNS INTO CAPS
 /{
         keymap {
                 compatible = "zmk,keymap";
 
                 default_layer {
                          bindings = <
-   &lt 3 ESC  &kp Q  &kp W  &kp E  &kp R  &kp T           &kp Y  &kp U  &kp I  &kp O      &kp P      &kp TAB      
-   &kp LALT   &kp A  &kp S  &kp D  &kp F  &kp G           &kp H  &kp J  &kp K  &kp L      &kp COLON  &kp RALT
-   &kp LCTRL  &kp Z  &kp X  &kp C  &kp V  &kp B           &kp B  &kp N  &kp M  &kp COMMA  &kp DOT    &kp RCMD
-               &kp LCMD  &kp SPACE  &lt 2 TAB             &lt 1 RET  &kp BSPC  &kp RSHIFT         
-                        >;
-                };
+   &mt LALT ESC  &kp Q  &kp W  &kp E  &kp R  &kp T           &kp Y  &kp U  &kp I  &kp O      &kp P      &LT 4 TAB     
+   &kp LCTRL     &kp A  &kp S  &kp D  &kp F  &kp G           &kp H  &kp J  &kp K  &kp L      &kp COLON  &kp RET
+   &kp LSHFT     &kp Z  &kp X  &kp C  &kp V  &kp FSLH        &kp B  &kp N  &kp M  &kp COMMA  &kp DOT    &kp RCMD
+                    &kp LCMD  &kp SPACE  &lt 2 CAPS          &lt 1 ENT   &kp BSPC  &kp RCMD                                     //  maybe add a combo when i press layer one and two it triggers shift? or whaterver other two keys, prefferably thumb keys.
+                        >;                                                                                     //  also add xombos to quickly zoom in ando out instead of cmd plus minus
+                };                                                                                                       // maybe combo for ecape as well
 
                 layer_one {  
                         bindings = <
-   &lt 3 ESC  &none   &kp N1  &kp N2  &kp N3  &none          &kp C_VOL_DN  &kp C_VOL_UP  &kp UP    &kp C_PREV      &kp C_PP                           &kp C_NEXT 
-   &kp LCTRL  &kp N0  &kp N4  &kp N5  &kp N6  &none          &kp C_MUTE    &kp LEFT      &kp DOWN  &kp RIGHT       &kp C_AC_ZOOM_IN                   &kp C_AC_SEARCH
-   &kp LALT   &none   &kp N7  &kp N8  &kp N9  &none          &kp C_BRI_DN  &kp C_BRI_UP  &trans    &kp C_SNAPSHOT  &kp C_AC_DESKTOP_SHOW_ALL_WINDOWS  &kp C_AC_DESKTOP_SHOW_ALL_APPLICATIONS
+   &trans  &none   &kp N1  &kp N2  &kp N3  &none          &kp C_VOL_DN  &kp C_VOL_UP  &kp UP    &kp C_PREV      &kp C_PP                           &kp C_NEXT 
+   &trans  &kp N0  &kp N4  &kp N5  &kp N6  &none          &kp C_MUTE    &kp LEFT      &kp DOWN  &kp RIGHT       &kp C_AC_ZOOM_IN                   &kp C_AC_SEARCH
+   &trans  &none   &kp N7  &kp N8  &kp N9  &none          &kp C_BRI_DN  &kp C_BRI_UP  &trans    &kp C_SNAPSHOT  &kp C_AC_DESKTOP_SHOW_ALL_WINDOWS  &kp C_AC_DESKTOP_SHOW_ALL_APPLICATIONS
                              &trans  &trans   &trans         &trans  &trans  &trans    
                         >;
                 };
 
                 layer_two {
                         bindings = <
-   &lt 3 ESC  &kp DLLR   &kp AT     &kp HASH   &kp SEMI   &kp PRCNT    &kp PLUS   &kp LPAR  &kp RPAR  &kp APOS   &kp PIPE  &kp STAR 
-   &kp LCTRL  &kp STAR   &kp GRAVE  &kp UNDER  &kp COLON  &kp EXCL     &kp MINUS  &kp LBKT  &kp RBKT  &kp DQT    &kp LT    &kp GT
-   &kp LALT   &kp TILDE  &kp DOT    &kp CARET  &kp AMPS   &kp QMARK    &kp EQUAL  &kp LBRC  &kp RBRC  &kp COMMA  &kp FSLH  &kp BSLH
+   &trans  &kp DLLR   &kp AT     &kp HASH   &kp SEMI   &kp PRCNT    &kp PLUS   &kp LPAR  &kp RPAR  &kp APOS   &kp PIPE  &kp STAR 
+   &trans  &kp STAR   &kp GRAVE  &kp UNDER  &kp COLON  &kp EXCL     &kp MINUS  &kp LBKT  &kp RBKT  &kp DQT    &kp LT    &kp GT
+   &trans  &kp TILDE  &kp DOT    &kp CARET  &kp AMPS   &kp QMARK    &kp EQUAL  &kp LBRC  &kp RBRC  &kp COMMA  &kp FSLH  &kp BSLH
                                              &trans  &trans  &trans    &trans  &trans  &trans
                         >;
                 };
 
                 layer_three {
                         bindings = <
-   &kp ESC    &trans      &trans          &trans        &trans          &trans        &trans  &kp F1  &kp F2   &kp F3   &kp F4  &ext_power EP_ON
-   &kp LCTRL  &bt BT_CLR  &bt BT_SEL 0    &bt BT_SEL 1  &bt BT_SEL 2    &trans        &trans  &kp F5  &kp F6   &kp F7   &kp F8  &ext_power EP_OFF
-   &kp LALT   &trans      &trans          &trans        &trans          &trans        &trans  &kp F9  &kp F10  &kp F11  &kp F12 &trans  
-                                          &trans        &trans          &trans        &trans  &trans  &trans
+   &kp F1  &kp F2    &kp F3   &kp F4   &kp F5   &kp F6        &kp F7  &kp F8   &kp F9   &kp F10  &kp F11  &kp F12
+   &trans  &trans    &trans   &trans   &trans   &trans        &trans  &trans   &trans   &trans   &trans   &trans  
+   &trans  &trans    &trans   &trans   &trans   &trans        &trans  &trans   &trans   &trans   &trans   &ext_power EP_TOG  
+                             &trans   &trans    &trans        &trans  &trans  &trans
                         >;
-                };          
+                }; 
+
+                layer_four {
+                        bindings = <
+   &kp F1  &kp F2    &kp F3   &kp F4   &kp F5   &kp F6        &kp F7  &kp F8   &kp F9   &kp F10  &kp F11  &kp F12
+   &trans  &trans    &trans   &trans   &trans   &trans        &trans  &trans   &trans   &trans   &trans   &trans  
+   &trans  &trans    &trans   &trans   &trans   &trans        &trans  &trans   &trans   &trans   &trans   &ext_power EP_TOG  
+                             &trans   &trans    &trans        &trans  &trans  &trans
+                        >;
+                };                           
         };
 };
 
