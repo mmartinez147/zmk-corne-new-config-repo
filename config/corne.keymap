@@ -69,7 +69,7 @@
 
                 layer_four {
                         bindings = <
-   &trans  &trans    &trans   &trans   &trans   &trans        &kp RGB_HUI  &trans   &trans   &trans   &trans    &trans 
+   &trans  &trans    &trans   &trans   &trans   &trans        &kp RGB_HUI  &trans   &trans   &trans   &trans        &trans 
    &trans  &trans    &trans   &trans   &trans   &trans        &kp RGB_HUD  &trans   &trans   &trans   &kp RGB_BRD   &kp RGB_BRI  
    &trans  &trans    &trans   &trans   &trans   &trans        &kp RGB_EFF  &trans   &trans   &trans   &trans        &ext_power EP_TOG  
                               &trans   &trans   &trans        &trans       &trans   &trans
