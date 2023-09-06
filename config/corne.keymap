@@ -23,8 +23,6 @@
     };
 };
 
-
-
 // ADD TAP DANCE FOR SHIFT KEY THAT WHEN DOUBLE TAPPE TURNS INTO CAPS
 /{
         keymap {
@@ -68,17 +66,11 @@
 
                 layer_four {
                         bindings = <
-   &trans  &trans    &trans   &trans   &trans   &trans        &kp RGB_HUI  &trans   &trans   &trans   &trans        &trans 
-   &trans  &trans    &trans   &trans   &trans   &trans        &kp RGB_HUD  &trans   &trans   &trans   &kp RGB_BRD   &kp RGB_BRI  
-   &trans  &trans    &trans   &trans   &trans   &trans        &kp RGB_EFF  &trans   &trans   &trans   &trans        &ext_power EP_TOG  
-                              &trans   &trans   &trans        &trans       &trans   &trans
+   &trans  &trans    &trans   &trans   &trans   &trans        &rgb_ug RGB_HUI  &trans   &trans   &trans   &rgb_ug RGB_BRI   &trans 
+   &trans  &trans    &trans   &trans   &trans   &trans        &rgb_ug RGB_HUD  &trans   &trans   &trans   &rgb_ug RGB_BRD   &trans 
+   &trans  &trans    &trans   &trans   &trans   &trans        &rgb_ug RGB_EFF  &trans   &trans   &trans   &trans            &ext_power EP_TOG  
+                              &trans   &trans   &trans        &trans           &trans   &trans
                         >;
                 };                           
         };
 };
-
-// -----------------------------------------------------------------------------------------
-// | ESC  |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  |      |
-// | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  :  |      |
-// | ALT  |  Z  |  X  |  C  |  V  |  B  |   |  B  |  N   |  M  |  ,  |  .  | shft |        
-//                    |shft | cmd |SPClw|   |ENTrs| BKSP |tbtri| 
