@@ -68,7 +68,7 @@
                         bindings = <
    &rgb_ug RGB_HUI  &rgb_ug RGB_SAI    &rgb_ug RGB_BRI   &trans   &trans   &trans        &trans  &trans   &trans   &trans   &trans   &trans 
    &rgb_ug RGB_HUI  &rgb_ug RGB_SAD    &rgb_ug RGB_BRD   &trans   &trans   &trans        &trans  &trans   &trans   &trans   &trans   &trans 
-   &rgb_ug RGB_EFF  &trans             &trans            &trans   &trans   &trans        &trans  &trans   &trans   &trans   &trans   ext_power EP_TOG  
+   &rgb_ug RGB_EFF  &trans             &trans            &trans   &trans   &trans        &trans  &trans   &trans   &trans   &trans   &ext_power EP_TOG  
                                                          &trans   &trans   &trans        &trans  &trans   &trans
                         >;
                 };                           
