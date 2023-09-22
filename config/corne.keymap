@@ -38,7 +38,7 @@
         };
  };
 
-// ADD TAP DANCE FOR SHIFT KEY THAT WHEN DOUBLE TAPPED TURNS INTO CAPSs
+// ADD TAP DANCE FOR SHIFT KEY THAT WHEN DOUBLE TAPPED TURNS INTO CAPS
 /{
         keymap {
                 compatible = "zmk,keymap";
