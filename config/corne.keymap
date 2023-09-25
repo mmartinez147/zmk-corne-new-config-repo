@@ -48,7 +48,7 @@
    &kp ESC    &kp Q  &kp W  &kp E  &kp R  &kp T           &kp Y  &kp U  &kp I  &kp O      &kp P      &lt 4 TAB      
    &kp LCTRL  &kp A  &kp S  &kp D  &kp F  &kp G           &kp H  &kp J  &kp K  &kp L      &kp SEMI   &kp RET
    &sk LALT   &kp Z  &kp X  &kp C  &kp V  &kp FSLH        &kp B  &kp N  &kp M  &kp COMMA  &kp DOT    &kp RCMD   
-                   &kp LCMD  &gqt 2 SPACE  &kp LSHFT      &mt RSHIFT RET   &gqt 1 BSPC  &kp CAPS                                  
+                   &kp LCMD  &gqt 2 SPACE  &sk LSHFT      &mt RSHIFT RET   &gqt 1 BSPC  &kp CAPS                                  
                         >;                                                                                     
                 };                                                                                                       
 
