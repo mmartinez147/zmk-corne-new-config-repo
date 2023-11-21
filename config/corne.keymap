@@ -24,7 +24,6 @@
     };
 
 
-
         behaviors{
          gqt: global-quick-tap {
                 compatible = "zmk,behavior-hold-tap";
@@ -32,12 +31,13 @@
                 #binding-cells = <2>;
                 flavor = "tap-preferred";
                 tapping-term-ms = <200>;
-                quick-tap-ms = <50>;
+                quick-tap-ms = <70>;
                 global-quick-tap;
                 bindings = <&mo>, <&kp>;
                 };
         };
  };
+ 
 
 // ADD TAP DANCE FOR SHIFT KEY THAT WHEN DOUBLE TAPPED TURNS INTO CAPS
 /{
